@@ -1,0 +1,14 @@
+/**
+ * Google Fonts Demo
+ **/
+
+/* Add in the Google Fonts of your choice */
+h1, 
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3,
+h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
