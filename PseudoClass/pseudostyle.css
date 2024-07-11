@@ -1,0 +1,12 @@
+a:hover,
+h1:hover {
+    background: blue;
+}
+
+a:focus {
+    background: greenyellow;
+}
+
+a:active {
+    background: blueviolet;
+}
