@@ -1,3 +1,5 @@
  .class_name -> same style for multiple elements. For example: images all related to social media logos would have a class name .social
 
 #id_nam -> unique style for an element. For ex: specifying the logo of GitHub among all other social media logos
+
+Glassmorphism -> visual-design style that applies diff. levels of transparency to create frosted glass (aka blur) effectny creating depth & contrast btw fg & bg elements
