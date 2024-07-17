@@ -1,0 +1,221 @@
+/* used live sass compiler extension on vscode to view as CSS on web */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #CCC;
+  margin: 1ch auto;
+  max-width: 900px;
+}
+
+.word-search {
+  aspect-ratio: 1/1;
+  container-type: inline-size;
+  display: grid;
+  font-family: system-ui, sans-serif;
+  font-size: 3.5cqi;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  padding: 1px;
+  /* words */
+}
+.word-search fieldset {
+  border: 0;
+  display: grid;
+  margin: 0;
+  padding: 0;
+}
+.word-search input {
+  all: unset;
+  aspect-ratio: 1/1;
+  background: #FFF;
+  display: grid;
+  place-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: calc(8.3333333333cqi - 1px);
+}
+.word-search input:checked {
+  background-color: var(--bg, #FF0);
+  color: var(--c, #000);
+}
+.word-search input::after {
+  content: attr(value);
+}
+.word-search [name=w1] {
+  grid-area: 1/2/8/2;
+}
+.word-search [name=w1]:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+  --bg: #00BFFF;
+}
+.word-search [name=w2] {
+  grid-area: 1/3/1/13;
+}
+.word-search [name=w2]:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+  --bg: #FF4500;
+}
+.word-search [name=w3] {
+  grid-area: 7/1/13/1;
+}
+.word-search [name=w3]:has(:checked + :checked + :checked + :checked + :checked + :checked) {
+  --bg: #32CD32;
+}
+.word-search [name=w4] {
+  grid-area: 2/1/7/1;
+}
+.word-search [name=w4]:has(:checked + :checked + :checked + :checked + :checked) {
+  --bg: #8A2BE2;
+  --c: #FFF;
+}
+.word-search [name=w5] {
+  grid-area: 2/3/2/7;
+}
+.word-search [name=w5]:has(:checked + :checked + :checked + :checked) {
+  --bg: #FF1493;
+  --c: #FFF;
+}
+.word-search [name=w6] {
+  grid-area: 3/4/3/13;
+}
+.word-search [name=w6]:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+  --bg: #7FFF00;
+}
+.word-search [name=w7] {
+  grid-area: 2/10/2/13;
+}
+.word-search [name=w7]:has(:checked + :checked + :checked) {
+  --bg: #FF69B4;
+}
+.word-search [name=w8] {
+  grid-area: 3/3/10/3;
+}
+.word-search [name=w8]:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+  --bg: #1E90FF;
+  --c: #FFF;
+}
+.word-search [name=w9] {
+  grid-area: 4/9/4/13;
+}
+.word-search [name=w9]:has(:checked + :checked + :checked + :checked) {
+  --bg: #FFD700;
+}
+.word-search [name=w10] {
+  grid-area: 5/4/5/13;
+}
+.word-search [name=w10]:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+  --bg: #00FA9A;
+}
+.word-search [name=w11] {
+  grid-area: 4/4/4/8;
+}
+.word-search [name=w11]:has(:checked + :checked + :checked + :checked) {
+  --bg: #DC143C;
+  --c: #FFF;
+}
+.word-search [name=w12] {
+  grid-area: 8/2/13/2;
+}
+.word-search [name=w12]:has(:checked + :checked + :checked + :checked + :checked) {
+  --bg: #FF6347;
+}
+.word-search [name=w13] {
+  grid-area: 12/3/12/13;
+}
+.word-search [name=w13]:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+  --bg: #ADFF2F;
+}
+.word-search [name=w14] {
+  grid-area: 6/5/6/12;
+}
+.word-search [name=w14]:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+  --bg: #4682B4;
+  --c: #FFF;
+}
+.word-search [name=w15] {
+  grid-area: 6/4/12/4;
+}
+.word-search [name=w15]:has(:checked + :checked + :checked + :checked + :checked + :checked) {
+  --bg: #DA70D6;
+}
+.word-search [name=w16] {
+  grid-area: 7/5/12/5;
+}
+.word-search [name=w16]:has(:checked + :checked + :checked + :checked + :checked) {
+  --bg: #00CED1;
+}
+.word-search [name=w17] {
+  grid-area: 7/6/7/13;
+}
+.word-search [name=w17]:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+  --bg: #FF00FF;
+}
+.word-search [name=w18] {
+  grid-area: 2/7/2/10;
+}
+.word-search [name=w18]:has(:checked + :checked + :checked) {
+  --bg: #B22222;
+  --c: #FFF;
+}
+.word-search [name=w19] {
+  grid-area: 8/6/12/6;
+}
+.word-search [name=w19]:has(:checked + :checked + :checked + :checked) {
+  --bg: #5F9EA0;
+}
+.word-search [name=w20] {
+  grid-area: 8/7/8/13;
+}
+.word-search [name=w20]:has(:checked + :checked + :checked + :checked + :checked + :checked) {
+  --bg: #FF8C00;
+}
+.word-search [name=w21] {
+  grid-area: 9/7/12/7;
+}
+.word-search [name=w21]:has(:checked + :checked + :checked) {
+  --bg: #9932CC;
+  --c: #FFF;
+}
+.word-search [name=w22] {
+  grid-area: 9/8/12/8;
+}
+.word-search [name=w22]:has(:checked + :checked + :checked) {
+  --bg: #FF4500;
+}
+.word-search [name=w23] {
+  grid-area: 9/9/9/13;
+}
+.word-search [name=w23]:has(:checked + :checked + :checked + :checked) {
+  --bg: #2E8B57;
+  --c: #FFF;
+}
+.word-search [name=w24] {
+  grid-area: 10/3/12/3;
+}
+.word-search [name=w24]:has(:checked + :checked) {
+  --bg: #D2691E;
+}
+.word-search [name=w25] {
+  grid-area: 11/9/11/13;
+}
+.word-search [name=w25]:has(:checked + :checked + :checked + :checked) {
+  --bg: #40E0D0;
+}
+.word-search [name=w26] {
+  grid-area: 10/9/10/13;
+}
+.word-search [name=w26]:has(:checked + :checked + :checked + :checked) {
+  --bg: #9ACD32;
+}
+.word-search [name=c] {
+  grid-area: 6/12/6/13;
+}
+
+.horizontal {
+  grid-auto-flow: column;
+}
+
+.vertical {
+  grid-auto-flow: row;
+}/*# sourceMappingURL=style.css.map */

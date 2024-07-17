@@ -1,0 +1,227 @@
+/* used live sass compiler extension on vscode to view as CSS on web */
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: #CCC;
+    margin: 1ch auto;
+    max-width: 900px;
+}
+
+.word-search {
+    aspect-ratio: 1 / 1;
+    container-type: inline-size;
+    display: grid;
+    font-family: system-ui, sans-serif;
+    font-size: 3.5cqi;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    padding: 1px;
+
+    fieldset {
+        border: 0;
+        display: grid;
+        margin: 0;
+        padding: 0;
+    }
+
+    input {
+        all: unset;
+        aspect-ratio: 1/1;
+        background: #FFF;
+        display: grid;
+        place-content: center;
+        user-select: none;
+        width: calc((100cqi / 12) - 1px);
+
+        &:checked {
+            background-color: var(--bg, #FF0);
+            color: var(--c, #000);
+        }
+
+        &::after {
+            content: attr(value);
+        }
+    }
+
+    /* words */
+
+    [name=w1] {
+        grid-area: 1 / 2 / 8 / 2;
+        &:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+          --bg: #00BFFF;
+        }
+      }
+      [name=w2] {
+        grid-area: 1 / 3 / 1 / 13;
+        &:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+          --bg: #FF4500;
+        }
+      }
+      [name=w3] {
+        grid-area: 7 / 1 / 13 / 1;
+        &:has(:checked + :checked + :checked + :checked + :checked + :checked) {
+          --bg: #32CD32;
+        }
+      }
+      [name=w4] {
+        grid-area: 2 / 1 / 7 / 1;
+        &:has(:checked + :checked + :checked + :checked + :checked) {
+          --bg: #8A2BE2;
+          --c: #FFF;
+        }
+      }
+      [name=w5] {
+        grid-area: 2 / 3 / 2 / 7;
+        &:has(:checked + :checked + :checked + :checked) {
+          --bg: #FF1493;
+          --c: #FFF;
+        }
+      }
+      [name=w6] {
+        grid-area: 3 / 4 / 3 / 13;
+        &:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+          --bg: #7FFF00;
+        }
+      }
+      [name=w7] {
+        grid-area: 2/ 10 / 2 / 13;
+        &:has(:checked + :checked + :checked) {
+          --bg: #FF69B4;
+        }
+      }
+      [name=w8] {
+        grid-area: 3 / 3 / 10 / 3;
+        &:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+          --bg: #1E90FF;
+          --c: #FFF;
+        }
+      }
+      [name=w9] {
+        grid-area: 4 / 9 / 4 / 13;
+        &:has(:checked + :checked + :checked + :checked) {
+          --bg: #FFD700;
+        }
+      }
+      [name=w10] {
+        grid-area: 5 / 4 / 5 / 13;
+        &:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+          --bg: #00FA9A;
+        }
+      }
+      [name=w11] {
+        grid-area: 4 / 4 / 4 / 8;
+        &:has(:checked + :checked + :checked + :checked) {
+          --bg: #DC143C;
+          --c: #FFF;
+        }
+      }
+      [name=w12] {
+        grid-area: 8 / 2 / 13 / 2;
+        &:has(:checked + :checked + :checked + :checked + :checked) {
+          --bg: #FF6347;
+        }
+      }
+      [name=w13] {
+        grid-area: 12 / 3 / 12 / 13;
+        &:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+          --bg: #ADFF2F;
+        }
+      }
+      [name=w14] {
+        grid-area: 6 / 5 / 6 / 12;
+        &:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+          --bg: #4682B4;
+          --c: #FFF;
+        }
+      }
+      [name=w15] {
+        grid-area: 6 / 4 / 12 / 4;
+        &:has(:checked + :checked + :checked + :checked + :checked + :checked) {
+          --bg: #DA70D6;
+        }
+      }
+      [name=w16] {
+        grid-area: 7 / 5 / 12 / 5;
+        &:has(:checked + :checked + :checked + :checked + :checked) {
+          --bg: #00CED1;
+        }
+      }
+      [name=w17] {
+        grid-area: 7 / 6 / 7 / 13;
+        &:has(:checked + :checked + :checked + :checked + :checked + :checked + :checked) {
+          --bg: #FF00FF;
+        }
+      }
+      [name=w18] {
+        grid-area: 2 / 7 / 2 / 10;
+        &:has(:checked + :checked + :checked) {
+          --bg: #B22222;
+          --c: #FFF;
+        }
+      }
+      [name=w19] {
+        grid-area: 8 / 6 / 12 / 6;
+        &:has(:checked + :checked + :checked + :checked) {
+          --bg: #5F9EA0;
+        }
+      }
+      [name=w20] {
+        grid-area: 8 / 7 / 8 / 13;
+        &:has(:checked + :checked + :checked + :checked + :checked + :checked) {
+          --bg: #FF8C00;
+        }
+      }
+      [name=w21] {
+        grid-area: 9 / 7 / 12 / 7;
+        &:has(:checked + :checked + :checked) {
+          --bg: #9932CC;
+          --c: #FFF;
+        }
+      }
+      [name=w22] {
+        grid-area: 9 / 8 / 12 / 8;
+        &:has(:checked + :checked + :checked) {
+          --bg: #FF4500;
+        }
+      }
+      [name=w23] {
+        grid-area: 9 / 9 / 9 / 13;
+        &:has(:checked + :checked + :checked + :checked) {
+          --bg: #2E8B57;
+          --c: #FFF;
+        }
+      }
+      [name=w24] {
+        grid-area: 10 / 3 / 12 / 3;
+        &:has(:checked + :checked) {
+          --bg: #D2691E;
+        }
+      }
+      [name=w25] {
+        grid-area: 11 / 9 / 11 / 13;
+        &:has(:checked + :checked + :checked + :checked) {
+          --bg: #40E0D0;
+        }
+      }
+      [name=w26] {
+        grid-area: 10 / 9 / 10 / 13;
+        &:has(:checked + :checked + :checked + :checked) {
+          --bg: #9ACD32;
+        }
+      }
+
+      [name=c] {
+        grid-area: 6 / 12 / 6 /13;
+      }
+}
+
+.horizontal {
+    grid-auto-flow: column;
+}
+
+.vertical {
+    grid-auto-flow: row;
+}
