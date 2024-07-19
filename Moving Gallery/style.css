@@ -1,0 +1,85 @@
+/* General styles for the body */
+body {
+    min-height: 100vh;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Styles for the wrapper */
+.wrapper {
+    --overlap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Styles for the image content */
+.image-content {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for each image */
+img {
+    display: block;
+    border: 2px solid black;
+    transition: transform 200ms, filter 200ms;
+    isolation: isolate;
+    margin-right: calc(var(--overlap) * -1);
+}
+
+/* Remove margin for the last image */
+img:last-child {
+    margin-right: 0;
+}
+
+/* Translate images on hover */
+img:hover ~ img {
+    transform: translateX(var(--overlap));
+}
+
+/* Desaturate images that are not hovered */
+.image-content:hover img:not(:hover) {
+    filter: saturate(0.1);
+}
+
+/* Styles for the headlines */
+.headlines {
+    display: none;
+    width: 100%;
+}
+
+.headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.headline:hover {
+    background-color: #cccccc;
+}
+
+/* Adjust styles for touch devices and small screens */
+@media (hover: none) and (pointer: coarse), (max-width: 680px) {
+    .image-content {
+        display: none;
+    }
+
+    .headlines {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
