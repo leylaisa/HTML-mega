@@ -1,0 +1,108 @@
+
+/* gradient balls in the background */
+section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    perspective: 1000px;
+    z-index: 2; /* global z-index for the navbar is 3 so make it less */
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(-150px, -100px);
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(150px, 100px);
+}
+
+/*the card UI*/
+.container {
+    position: relative;
+    height: 300px;
+    width: 600px;
+    z-index: 100;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* adds an animation during hover */
+.container:hover {
+    transform: rotateY(180deg);
+}
+
+/* the transparent bg for card */
+.container .card {
+    /* makes sure that the backface has the same position w the front */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    border-radius: 25px;
+    /* blurs the bg */
+    backdrop-filter: blur(25px);
+    /* this rounds the corners*/
+    background: rgba(255, 255, 255, 0.1);
+    /* sets the bg color */
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* hides the backface until hovered on*/
+    backface-visibility: hidden;
+}
+
+.front-face header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+/* the back of the card */
+.card.back-face {
+    border: none;
+    padding: 15px 25px 25px 25px;
+    transform: rotateY(180deg);
+    
+    h3 {
+        margin-top: 10px;
+        text-align: center;
+        
+        color: rgba(255, 255, 255, 0.7);
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #d380cb;
+        }
+    }
+}
+
+.back-face img {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    margin-left: 60px;
+    margin-top: 70px;
+    border-radius: 25px;
+}
