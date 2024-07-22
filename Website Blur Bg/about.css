@@ -1,0 +1,65 @@
+/* Styles for the wrapper */
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px; /* 20px margin on left and right */
+    max-width: 1500px; /* Optional: Adjust the max-width as needed */
+    margin: 100px 20px; /* 10px margin on top and bottom, 20px on left and right */
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    z-index: 2;
+}
+
+/* Styles for the image */
+.wrapper img {
+    width: 200px; /* Adjust width as needed */
+    border-radius: 15px;
+    margin-right: 20px; /* Space between image and text */
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+/* Container for text content */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: calc(100% - 220px); /* Account for image width and margin */
+}
+
+/* Styles for the heading */
+.text-content h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Styles for the paragraphs */
+.text-content p {
+    color: white;
+    line-height: 1.6;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .wrapper img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        max-width: none;
+    }
+}
