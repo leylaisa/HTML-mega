@@ -5,8 +5,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
 header {
     position: fixed;
     top: 0;
