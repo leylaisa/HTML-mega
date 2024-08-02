@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- NOTE:  do not use var in JS, use const & let !!! -->
+    <h2>My First JavaScript</h2>
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to display Date and Time.</button>
+
+    <p id="demo"></p>
+
+    <script type="text/JavaScript">
+
+        /* Variables declared with let have Block Scope --> cannot be accessed outside the brackets
+
+        Variables declared with let must be Declared before use
+
+        Variables declared with let cannot be Redeclared in the same scope 
+        
+        Variables declared with the var always have Global Scope.
+
+        Variables declared with the var keyword can NOT have block scope 
+
+        toFixed(2) is perfect for working with money.
+
+        You should use objects when you want the element names to be strings (text).
+
+        You should use arrays when you want the element names to be numbers.
+
+        the Array with() method is a safe way to update elements in an array without altering the original array.
+
+        The ... operator expands an iterable (like an array) into more elements
+
+        Returns function Object() {[native code]}:
+        {name:'John',age:34}.constructor
+
+        Note that you don't use the "on" prefix for the addEventListener() method; use "click" instead of "onclick".
+
+        In bubbling the inner most element's event is handled first and then the outer: the <p> element's click event is handled first, then the <div> element's click event.
+
+        In capturing the outer most element's event is handled first and then the inner: the <div> element's click event will be handled first, then the <p> element's click event.
+
+
+        addEventListener(event, function, useCapture);
+        The default value is false, which will use the bubbling propagation, when the value is set to true, the event uses the capturing propagation.
+
+
+        DOM -> Document Object Model
+
+        An HTMLCollection is always a live collection. If you add a <li> element to a list in the DOM, the list in the HTMLCollection will also change. 
+        The getElementsByClassName() and getElementsByTagName() methods return a live HTMLCollection.
+
+        A NodeList is most often a static collection. If you add a <li> element to a list in the DOM, the list in NodeList will not change.The querySelectorAll() method returns a static NodeList.
+        The childNodes property returns a live NodeList.
+
+        BOM -> Browser Object Model
+
+        API -> Application Programming Interface
+
+        AJAX -> Asynchronous JavaScript And XML
+
+        JSON -> JavaScript Object Notation
+
+        */
+
+        for (var i = 0; i < 3; i++) {
+            setTimeout(() => console.log(i), 1);
+        }
+
+        for (let i = 0; i < 3; i++) {
+        setTimeout(() => console.log(i), 1);
+        }
+
+        const shape = {
+            radius: 10,
+            diameter() {
+                return this.radius * 2;
+            },
+            perimeter: () => 2 * Math.PI * this.radius,
+            };
+
+        console.log(shape.diameter());
+        console.log(shape.perimeter());
+
+        function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+        let name = cname + "=";
+        let ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+        }
+
+        function checkCookie() {
+        let user = getCookie("username");
+        if (user != "") {
+            alert("Welcome again " + user);
+        } else {
+            user = prompt("Please enter your name:", "");
+            if (user != "" && user != null) {
+            setCookie("username", user, 365);
+            }
+        }
+        }
+    </script>
+</body>
+
+</html>
