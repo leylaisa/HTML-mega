@@ -69,6 +69,25 @@
 
         JSON -> JavaScript Object Notation
 
+        Preventing any jQuery code from running before the document is finished loading (is ready):
+        $(function(){       OR       $(document).ready(function(){
+
+        // jQuery methods go here...
+
+        });
+
+        The on() method attaches one or more event handlers for the selected elements.
+        $("...").on( {
+            click: function() {
+            },
+            hover: function() {
+            }
+        });
+
+        By default, all HTML elements have a static position, and cannot be moved.
+        To manipulate the position and to use ANIMATE feature of jQuery, remember to first set the CSS position property of the element to relative, fixed, or absolute!
+
+        
         */
 
         for (var i = 0; i < 3; i++) {
