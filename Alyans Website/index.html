@@ -13,47 +13,39 @@
 
 <body>
     <header>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/images/Header Logo.png" alt="Logo" width="120px" height="34px"
-                        class="d-inline-block align-text-top">
+
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="./assets/images/Header Logo.png" alt="Logo" width="120px" height="34px"
+                    class="d-inline-block align-text-top">
+            </a>
+            <ul class="menu-links">
+                <li><a href="#">TRENDING</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <div class="navbar-right">
+                <a href="#" class="navbar-favorite">
+                    <img src="./assets/images/heart-empty.png" alt="Favorites Logo" width="24px" height="24px">
                 </a>
 
-                <ul class="nav nav-underline justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">TRENDING</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">BLOG</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
-                    </li>
-                </ul>
-
-                <div class="navbar-right">
-                    <a href="#" class="navbar-favorite">
-                        <img src="./assets/images/heart.png" alt="Favorites Logo" width="24px" height="24px">
-                    </a>
-    
-                    <div class="lang-dropdown">
+                <div class="lang-dropdown">
+                    <button class="dropdown">
                         <img src="./assets/images/lang-logo.png" alt="Language Dropdown Menu Logo">
-                        <input type="checkbox" id="drop"/>
-                        <label for="drop">EN</label>
+                        EN
                         <img src="./assets/images/lang-arrow.png" alt="Language Dropdown Menu Arrow">
-                        <ul class="dropdown">
-                            <li>AZ</a></li>
-                            <li>RU</a></li>
-                        </ul>
-                    </div>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>AZ</li>
+                        <li>RU</li>
+                    </ul>
                 </div>
+        </nav>
     </header>
 
-    <!-- <main>
+    <main>
         <section class="carousel">
             <div id="main-carousel-auto" class="carousel slide" data-bs-slide="carousel">
                 <div class="carousel-inner">
@@ -88,7 +80,7 @@
 
         <section class="categories">
             <div class="categories-header">
-                <p>CATEGORIES</p>
+                <p>CATEGORY</p>
             </div>
             <div class="categories-buttons">
                 <button id="rings-button">
@@ -124,6 +116,14 @@
             </div>
 
             <div class="products-gallery">
+                <div class="card" id="solitaire-ring">
+                    <button class="favorite"><img src="./assets/images/heart-full.png" alt="Marked Favorite"></button>
+                    <img src="./assets/images/product-ring-solitaire.png" alt="Solitaire Ring">
+                    <p class="prod-name">Solitaire Ring</p>
+                    <p class="prod-price-current">700₼</p>
+                    <p class="prod-price-before">850₼</p>
+                    <p><button class="order">Order Now</button></p>
+                </div>
 
             </div>
 
@@ -145,7 +145,7 @@
                 
             </div>
         </section>
-    </main> -->
+    </main>
 </body>
 
 </html>
