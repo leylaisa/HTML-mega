@@ -13,7 +13,6 @@
 
 <body>
     <header>
-
         <nav class="navbar">
             <a href="index.html" class="logo">
                 <img src="./assets/images/Header Logo.png" alt="Logo" width="120px" height="34px"
@@ -139,7 +138,8 @@
                 </div>
 
                 <div class="card" id="ring-set">
-                    <button class="favorite"><img src="./assets/images/heart-full.png" alt="Marked Favorite"></button>
+                    <button class="favorite"><img id="favorite" src="./assets/images/heart-full.png"
+                            alt="Marked Favorite"></button>
                     <img src="./assets/images/ring-set.png" alt="Solitaire Ring">
                     <p class="prod-name">Ring set</p>
                     <div class="prod-price">
@@ -215,27 +215,31 @@
             <div class="grid-gallery">
                 <div class="image-container" id="top-left">
                     <img src="./assets/images/grid-bg-top-left.png" alt="Rings Image Gallery">
-                    <p class="headline">RINGS</p>
+                    <div class="headline">RINGS</div>
                 </div>
                 <div class="image-container" id="top-right">
-                    <img src="./assets/images/grid-bg-top-right.png" alt="New Collection Necklaces">
-                    <p class="headline">NEW COLLECTION</p>
+                    <div class="top-right-default">
+                        <img id="right" src="./assets/images/grid-bg-top-right.png" alt="New Collection Necklaces">
+                        <div class="headline">NEW COLLECTION</div>
+                    </div>
+
+                    <!-- <div class="top-right-reveal">
+                        <img src="./assets/images/grid-bg-top-right-reveal.png" alt="New Collection Bracelet Revealed Image">
+                        <div class="revealed-header">New season, new bracelet</div>
+                        <div class="revealed-body-text">Style a colourful selection of your favourite symbols of the natural world on your bracelet, or take a "symmetrical" approach with two of each charm, styled in pairs across the chain.</div>
+                    </div> -->
                 </div>
-                <!-- <div class="image-container" id="top-right-reveal">
-                    <img src="./assets/images/grid-bg-top-right-reveal.png" alt="New Collection Bracelet Revealed Image">
-                    <p class="revealed-header">New season, new bracelet</p>
-                    <p class="revealed-body-text">Style a colourful selection of your favourite symbols of the natural world on your bracelet, or take a "symmetrical" approach with two of each charm, styled in pairs across the chain.</p>
-                </div> -->
                 <div class="image-container" id="bottom-left">
                     <img src="./assets/images/grid-bg-bottom-left.png" alt="Earrings Image Gallery">
-                    <p class="headline">EARRINGS</p>
+                    <div class="headline">EARRINGS</div>
                 </div>
                 <div class="image-container" id="bottom-right">
-                    <img src="./assets/images/grid-bg-bottom-right.png" alt="Gallery Bottom Right Background">
-                    <p class="body-text">Jewelry is all about expressing who you are through your style. Give a voice to your loves through pieces that remind you of everything you are and everything you love.
+                    <img id="right" src="./assets/images/grid-bg-bottom-right.png"
+                        alt="Gallery Bottom Right Background">
+                    <!-- <div class="body-text">Jewelry is all about expressing who you are through your style. Give a voice to your loves through pieces that remind you of everything you are and everything you love.
                         <button>More</button>
-                    </p>
-                </div>                
+                    </div> -->
+                </div>
             </div>
 
             <div class="new-collection-header">
@@ -289,6 +293,51 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <nav class="footer-navbar">
+            <a href="index.html" class="logo">
+                <img src="./assets/images/logo-light.png" alt="Logo" width="120px" height="34px"
+                    class="d-inline-block align-text-top">
+            </a>
+
+            <ul class="menu-links">
+                <li><a href="#">TRENDING</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">TRENDING</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">BLOG</a></li>
+            </ul>
+
+            <div class="contact">
+                <p id="telephone"><img src="./assets/images/call.png" alt="Telephone logo">(051) 984 66 66</p>
+                <p id="email"><img src="./assets/images/sms.png" alt="Email logo">alyansweb@gmail.com</p>
+            </div>
+        </nav>
+        <nav class="footer-end">
+            <div class="copyright">
+                <p>© 2023. Bütün hüquqlar qorunur</p>
+            </div>
+            <ul class="socials">
+                <li>
+                    <a href="https://www.instagram.com/">
+                        <img src="./assets/images/instagram.png" alt="Instagram logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.whatsapp.com/">
+                        <img src="./assets/images/whatsapp.png" alt="Whatsapp logo">
+                    </a>
+                </li>
+                <li> <a href="https://www.facebook.com/">
+                        <img src="./assets/images/facebook.png" alt="Facebook logo">
+                    </a>
+                </li>
+            </ul>
+            <img src="./assets/images/footer-right.png" alt="Baku Creative Projects logo">
+        </nav>
+    </footer>
 </body>
 
 </html>
