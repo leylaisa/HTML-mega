@@ -81,6 +81,10 @@ header {
   }
 
   .navbar-right {
+    .navbar-favorite {
+      text-decoration: none;
+    }
+
     .dropdown {
       background-color: transparent;
       color: rgb(0, 0, 0);
@@ -172,6 +176,7 @@ main {
     margin-right: 155px;
 
     .categories-header {
+      margin-top: 30px;
       font-weight: 500;
       font-size: 28px;
     }
@@ -338,6 +343,11 @@ main {
           filter: brightness(0.8);
         }
 
+        /* this image is a bit transparent itself, so darken it more */
+        img#bottom-right {
+          filter: brightness(0.4);
+        }
+
         .headline {
           position: absolute;
           top: 50%;
@@ -347,6 +357,76 @@ main {
           font-weight: 500;
           text-align: center;
         }
+
+        .body-text {
+          display: flex;
+          flex-wrap: wrap;
+          width: 700px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 22px;
+          font-weight: 500;
+          text-align: left;
+
+          button {
+            width: 120px;
+            height: 40px;
+            font-weight: 500;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 1);
+            border: 0.8px solid rgba(255, 255, 255, 1);
+            border-radius: 4px;
+            margin-top: 10px;
+            background: transparent;
+          }
+        }
+
+        .top-right-reveal {
+          display: none;
+          z-index: 2;
+
+          img {
+            max-width: 100%;
+            display: inline-block;
+            isolation: isolate;
+          }
+
+          .revealed-text {
+            display: flex;
+            flex-wrap: wrap;
+            width: 700px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 500;
+            text-align: left;
+
+            .revealed-header {
+              font-size: 34px;
+              font-weight: 700;
+              margin-bottom: 20px;
+            }
+            .revealed-body {
+              font-size: 24px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+    }
+    .grid-gallery:hover {
+      .top-right-reveal {
+        display: block;
+      }
+      .top-right-default {
+        display: none;
+      }
+      img#bottom-right {
+        filter: brightness(0.7);
       }
     }
 
@@ -494,6 +574,10 @@ main {
           font-size: 18px;
         }
       }
+
+      .card:hover {
+        box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+      }
     }
   }
 }
@@ -537,14 +621,18 @@ footer {
     }
 
     .contact {
+      margin-top: 5px;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
       align-items: flex-start;
 
-      img {
-        margin-right: 10px;
-        margin-bottom: 5px;
+      p {
+        margin-bottom: 0;
+        svg {
+          margin-right: 5px;
+          margin-bottom: 5px;
+        }
       }
     }
   }
@@ -561,7 +649,7 @@ footer {
 
     .copyright {
       size: 14px;
-      text-align: center;
+      margin-top: 9px;
     }
     .socials {
       margin: 0;
@@ -571,6 +659,14 @@ footer {
       list-style: none;
       size: 14px;
       gap: 10px;
+    }
+
+    .created {
+      display: flex;
+      p {
+        margin-top: 9px;
+        margin-right: 5px;
+      }
     }
   }
 }
