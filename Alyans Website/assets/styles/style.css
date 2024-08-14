@@ -136,20 +136,20 @@ header {
 main {
   .carousel {
     margin: 10px 50px 10px 75px;
-    border-radius: 8px;
-    width: 1240px;
-    height: 348px;
-
+    
     img {
+      width: 1240px !important;
+      height: 348px !important;
+      border-radius: 8px;
       filter: brightness(60%);
     }
-
+  
     h4 {
       font-weight: 700;
       font-size: 32px;
       text-align: left;
     }
-
+  
     p {
       font-weight: 400;
       font-size: 24px;
@@ -159,12 +159,12 @@ main {
       width: 120px;
       height: 40px;
     }
-
+  
     .carousel-control-prev-icon {
       background-image: url(../images/arrow-left.png);
       background-size: auto;
     }
-
+  
     .carousel-control-next-icon {
       background-image: url(../images/arrow-right.png);
       background-size: auto;
@@ -185,17 +185,18 @@ main {
       display: flex;
       justify-content: space-between;
       width: 1230px;
-
+      
       #rings-button {
         background: linear-gradient(85.39deg, #f4f8ee 0%, #ffead0 98.49%);
       }
-
+      
       button {
         width: 280px;
         height: 89px;
         border: none;
         border-radius: 10px;
         background: rgba(244, 248, 238, 1);
+        transition: box-shadow 0.3s ease-out;
 
         a {
           text-decoration: none;
@@ -211,6 +212,10 @@ main {
           height: 64px;
           margin-right: 60px;
         }
+      }
+
+      button:hover {
+        box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
       }
     }
   }
