@@ -84,29 +84,28 @@
                     </svg>
                 </a>
 
-                <div class="lang-dropdown">
-                    <button class="dropdown">
-                        <!-- <img src="./assets/images/lang-logo.png" alt="Language Dropdown Menu Logo"> -->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#101820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M7.99998 3H8.99998C7.04998 8.84 7.04998 15.16 8.99998 21H7.99998" stroke="#101820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15 3C16.95 8.84 16.95 15.16 15 21" stroke="#101820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16" stroke="#101820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3 8.99998C8.84 7.04998 15.16 7.04998 21 8.99998" stroke="#101820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        EN
-                        <!-- <img src="./assets/images/lang-arrow.png" alt="Language Dropdown Menu Arrow"> -->
-                         
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.72003 5.94L7.66675 10.8867C8.00008 11.2201 8.00008 11.22 8.33342 10.8866L13.28 5.94" stroke="#0C1011" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-    
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>AZ</li>
-                        <li>RU</li>
-                    </ul>
-                </div>
+                <div class="language-dropdown">
+                    <div class="language-selector">
+                      <svg id="globe-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#101820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M7.99998 3H8.99998C7.04998 8.84 7.04998 15.16 8.99998 21H7.99998" stroke="#101820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M15 3C16.95 8.84 16.95 15.16 15 21" stroke="#101820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16" stroke="#101820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M3 8.99998C8.84 7.04998 15.16 7.04998 21 8.99998" stroke="#101820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span class="language-text">EN</span>
+                      <button class="dropdown-button">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2.72003 5.94L7.66675 10.8867C8.00008 11.2201 8.00008 11.22 8.33342 10.8866L13.28 5.94" stroke="#0C1011" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </button>
+                    </div>
+                    <div class="dropdown-content">
+                      <a href="#" class="active">EN</a>
+                      <a href="#">AZ</a>
+                      <a href="#">RU</a>
+                    </div>
+                  </div>
             </div>
         </nav>
     </header>
@@ -619,6 +618,24 @@
                 const path = svg.querySelector("path");
                 path.classList.toggle("filled");
             });
+        });
+    </script>
+
+    <!-- JS for the language menu -->
+    <script>
+        document
+        .querySelector(".dropdown-button")
+        .addEventListener("click", function (e) {
+            e.stopPropagation();
+            const dropdown = document.querySelector(".language-dropdown");
+            dropdown.classList.toggle("show");
+        });
+
+        window.addEventListener("click", function () {
+        const dropdown = document.querySelector(".language-dropdown");
+        if (dropdown.classList.contains("show")) {
+            dropdown.classList.remove("show");
+        }
         });
     </script>
 </body>
