@@ -1,0 +1,114 @@
+main {
+  .nav-header,
+  .about-header {
+    margin: 10px 50px 10px 155px;
+  }
+  .nav-header {
+    a {
+      color: rgba(125, 125, 125, 1);
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+
+  .about-header {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .main-body {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 10%;
+    margin-right: 4%;
+    gap: 100px;
+    margin-bottom: 100px;
+    .about-text {
+      ul {
+        color: rgba(112, 167, 191, 1);
+        #header {
+          font-size: 24px;
+          font-weight: 600;
+        }
+        #body {
+          color: rgba(125, 125, 125, 1);
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .image-gallery {
+      margin-right: 100px;
+      #small {
+        position: absolute;
+        margin-left: -70px;
+        margin-top: 5%;
+        max-width: 220px;
+        box-shadow: -4px 4px 10px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+      }
+      #big {
+        max-width: 420px;
+        box-shadow: -4px 4px 10px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+/* Mobile version */
+@media (max-width: 768px) {
+  main {
+    .nav-header,
+    .about-header {
+        margin: 10px 20px !important;
+    }
+    .nav-header {
+      a {
+        margin: 0 !important;
+      }
+    }
+
+    .about-header {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .main-body {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        transform: scale(1, -1);
+        margin: 0;
+        align-items: center;
+
+        .about-text,
+        .image-gallery {
+            transform: scale(1, -1);
+        }
+
+        .about-text {
+            margin-top: 50px;
+            #header {
+                font-size: 18px !important;
+            }
+            #body {
+                font-size: 15px !important;
+            }
+        }
+
+        .image-gallery {
+            margin-left: 25%;
+            margin-right: 10%;
+
+            #small {
+                width: 70% !important;
+            }
+            #big {
+                width: 100% !important;
+            }
+        }
+    }
+  }
+}

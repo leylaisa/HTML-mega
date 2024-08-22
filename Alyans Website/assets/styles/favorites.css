@@ -3,6 +3,9 @@
   main {
     .nav-header {
       margin: 10px 20px !important;
+      a {
+        margin: 0 !important;
+      }
     }
     .empty-fav {
       width: 80%;

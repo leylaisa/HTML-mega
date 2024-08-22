@@ -65,6 +65,11 @@ main {
         svg {
             margin-right: 8px;
             margin-top: 3px;
+        } 
+
+        #email {
+          text-decoration: none;
+          color: black;
         }
     }
   }
