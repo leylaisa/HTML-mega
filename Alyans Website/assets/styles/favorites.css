@@ -1,434 +1,91 @@
-@font-face {
-    font-family: "Gilroy";
-    src: url("../fonts/Gilroy/Gilroy-Light.ttf") format("truetype");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Gilroy";
-    src: url("../fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Gilroy";
-    src: url("../fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Gilroy";
-    src: url("../fonts/Gilroy/Gilroy-Semibold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Gilroy";
-    src: url("../fonts/Gilroy/Gilroy-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  * {
-    font-family: "Gilroy";
-  }
-  
-  header {
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-  
-    .navbar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      align-items: center;
-  
-      .logo {
-        justify-content: start;
+/* Mobile version */
+@media (max-width: 768px) {
+  main {
+    .nav-header {
+      margin: 10px 20px !important;
+    }
+    .empty-fav {
+      width: 80%;
+      margin: 0 50px;
+
+      #msg-body {
+        visibility: hidden;
+        position: relative;
       }
-  
-      .menu-links {
-        margin: 0;
-        top: 34px;
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        gap: 35px;
-        size: 14px;
-        font-weight: 600;
-      }
-  
-      a {
-        color: #000000;
-        text-decoration: none;
-        transform: 0.2s ease;
-      }
-  
-      a:hover {
-        color: #f2aa4c;
-        text-decoration: underline;
-      }
-  
-      .navbar-right {
-        img,
-        svg {
-          vertical-align: inherit;
-        }
-        .navbar-favorite {
-          text-decoration: none !important;
-          padding-right: 10px;
-        }
-  
-        .language-dropdown {
-          position: relative;
-          display: inline-block;
-          font-family: Arial, sans-serif;
-  
-          .language-selector {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-  
-            .language-text {
-              padding: 5px;
-              color: #333;
-              font-weight: bold;
-            }
-  
-            .dropdown-button {
-              background: none;
-              border: none;
-              font-size: 14px;
-              color: #333;
-              cursor: pointer;
-              padding: 0;
-            }
-          }
-  
-          .dropdown-content {
-            margin-top: 5px;
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 0;
-            border-radius: 5px;
-            z-index: 2;
-            width: 100%;
-  
-            a {
-              color: #333;
-              padding: 10px 15px;
-              text-decoration: none;
-              display: block;
-              text-align: center;
-              font-weight: bold;
-            }
-  
-            a:hover,
-            a.active {
-              background-color: #f5f5f5;
-              border-radius: 5px;
-              color: #c59622;
-            }
-          }
-        }
-  
-        .language-dropdown.show .dropdown-content {
-          display: block;
-        }
+
+      #msg-body::after {
+        visibility: visible;
+        position: absolute;
+        content: "It is empty here. Personalize your shopping";
+        color: rgba(125, 125, 125, 1);
+        text-align: center;
+        top: 0;
+        left: 0;
       }
     }
-  
-    #close-menu-btn {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      cursor: pointer;
-      display: none;
-    }
-  
-    #hamburger-btn {
-      color: black;
-      cursor: pointer;
-      display: none;
-    }
   }
-  
   footer {
     position: fixed;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(95, 95, 95, 1);
-  
-    .footer-navbar {
-      padding: 30px;
-  
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-  
-      .logo {
-        justify-content: start;
-      }
-  
-      .menu-links {
-        margin: 0;
-        top: 34px;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        list-style: none;
-        gap: 15px;
-        column-gap: 40px;
-        size: 24px;
-        font-weight: 600;
-  
-        a {
-          text-decoration: none;
-          color: rgba(255, 255, 255, 1);
-        }
-      }
-  
-      .contact {
-        margin-top: 5px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: flex-start;
-  
-        p {
-          margin-bottom: 0;
-          svg {
-            margin-right: 5px;
-            margin-bottom: 5px;
-          }
-        }
+    top: auto !important;
+  }
+}
+
+main {
+  .nav-header {
+    a {
+      margin: 10px 155px 10px 155px;
+      color: rgba(125, 125, 125, 1);
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+  .empty-fav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    gap: 20px;
+
+    svg {
+      margin-bottom: 20px;
+    }
+    p {
+      margin: 0;
+    }
+    #msg-main {
+      color: rgba(232, 113, 46, 1);
+      font-weight: 600;
+      font-size: 22px;
+    }
+    #msg-body {
+      color: rgba(173, 173, 173, 1);
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    button {
+      margin-top: 30px;
+      background-color: rgba(232, 113, 46, 1);
+      font-size: 20px;
+      font-weight: 400;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 30px;
+      transition: 0.3s ease-out;
+      a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 1);
       }
     }
-  
-    .footer-end {
-      padding: 20px;
-      background-color: rgba(104, 104, 104, 1);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding-left: 200px;
-      padding-right: 200px;
-  
-      .copyright {
-        size: 14px;
-        margin-top: 9px;
-      }
-      .socials {
-        margin: 0;
-        top: 34px;
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        size: 14px;
-        gap: 10px;
-      }
-  
-      .created {
-        display: flex;
-        p {
-          margin-top: 9px;
-          margin-right: 5px;
-        }
+
+    button:hover {
+      background: transparent;
+      border: 1px solid rgba(232, 113, 46, 1);
+      a {
+        color: rgba(232, 113, 46, 1);
       }
     }
   }
-  
-  /* Mobile version */
-  @media (max-width: 768px) {
-  
-    body.no-scroll {
-      overflow: hidden;
-    }
-  
-    .navbar.fixed {
-      height: 90px;
-      position: fixed;
-      width: 100%;
-      z-index: 1000;
-      background-color: white;
-      top: 0;
-      padding: 20px;
-      left: 0;
-    }
-  
-    header.show-mobile-menu-::before {
-      content: "";
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      backdrop-filter: blur(5px);
-    }
-  
-    header {
-      #hamburger-btn,
-      #close-menu-btn {
-        display: block;
-      }
-  
-      .language-dropdown {
-        display: none !important;
-      }
-  
-      #hamburger-btn:hover {
-        color: #f2aa4c;
-      }
-  
-      .menu-links {
-        z-index: 5;
-        position: fixed;
-        top: 70px !important;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(50px);
-        flex-direction: column;
-        padding: 70px 135px 0;
-        text-align: center;
-  
-        transition: left 0.2s ease;
-      }
-    }
-    header.show-mobile-menu .navbar .menu-links {
-      left: 0;
-    }
-  
-    main {
-      overflow: hidden;
-
-      .nav-header {
-        margin: 10px 20px !important;
-      }
-      .empty-fav {
-        width: 80%;
-        margin: 0 50px;
-
-        #msg-body{
-            visibility: hidden;
-            position: relative;
-        }
-
-        #msg-body::after {
-            visibility: visible;
-            position: absolute;
-            content: "It is empty here. Personalize your shopping";
-            color: rgba(125, 125, 125, 1);
-            text-align: center;
-            top: 0;
-            left: 0;
-        }
-      }
-      
-    }
-  
-    footer {
-      .footer-navbar {
-        .logo,
-        .contact {
-          display: none;
-        }
-  
-        .menu-links {
-          font-size: 10px !important;
-          justify-items: center;
-          margin-left: 50px;
-  
-          li:nth-last-child(-n + 3) {
-            display: none;
-          }
-        }
-      }
-  
-      .footer-end {
-        padding: 5px;
-        .copyright,
-        .created {
-          font-size: 10px !important;
-        }
-  
-        .socials {
-          display: none;
-        }
-      }
-    }
-  }
-  
-  main {
-      .nav-header {
-        margin: 10px 155px 10px 155px;
-        color: rgba(125, 125, 125, 1);
-        font-weight: 500;
-      }
-      .empty-fav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 100px;
-        margin-bottom: 150px;
-        gap: 20px;
-
-        svg {
-            margin-bottom: 20px;
-        }
-        p {
-            margin: 0;
-        }
-        #msg-main {
-            color: rgba(232, 113, 46, 1);
-            font-weight: 600;
-            font-size: 22px;
-        }
-        #msg-body {
-            color: rgba(173, 173, 173, 1);
-            font-size: 18px;
-            font-weight: 400;
-        }
-
-        button {
-            margin-top: 30px;
-            background-color: rgba(232, 113, 46, 1);
-            font-size: 20px;
-            font-weight: 400;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 30px;
-            transition: 0.3s ease-out;
-            a {
-                text-decoration: none;
-                color: rgba(255, 255, 255, 1);
-            }
-        }
-
-        button:hover {
-            background: transparent;
-            border: 1px solid rgba(232, 113, 46, 1);
-            a {
-                color: rgba(232, 113, 46, 1);
-            }
-        }
-      }
-  }
-  
+}
